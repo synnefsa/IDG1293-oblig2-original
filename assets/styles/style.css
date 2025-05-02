@@ -1,0 +1,435 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#poster-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  z-index: 0;
+  line-height: 1;
+}
+#poster-container .poster-background,
+#poster-container .poster-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 0;
+  z-index: -1;
+}
+
+h1,
+h2 {
+  font-family: "Open Sans", sans-serif;
+}
+
+.marydale {
+  font-family: "marydale", sans-serif;
+}
+
+h1 {
+  font-size: clamp(1rem, 2vw, 1.5rem);
+  color: #095CA9;
+  font-weight: 800;
+}
+h1 span {
+  color: #0EA25D;
+}
+
+h2 {
+  font-size: clamp(0.6rem, 1vw, 0.75rem);
+  color: #000000;
+  font-weight: 400;
+}
+h2 span {
+  font-size: clamp(0.75rem, 1.2vw, 1rem);
+  font-weight: 800;
+}
+
+.section1 {
+  width: 100%;
+}
+.section1__flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  position: relative;
+}
+.section1__flex h1, .section1__flex h2 {
+  width: 35%;
+}
+.section1__p1 {
+  font-size: clamp(0.6rem, 1vw, 0.75rem);
+}
+.section1__p2 {
+  font-size: clamp(0.5rem, 0.6vw, 0.6rem);
+  position: absolute;
+  top: 22%;
+  width: 18%;
+}
+.section1__p3-1, .section1__p3-2 {
+  position: absolute;
+  font-size: clamp(0.6rem, 1vw, 0.75rem);
+  color: #FFFFFF;
+  font-weight: 800;
+}
+.section1__p3-1 {
+  top: 39%;
+  left: 30%;
+}
+.section1__p3-2 {
+  top: 41%;
+  left: 40%;
+}
+
+.section2 {
+  width: 100%;
+}
+.section2__flex1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  position: absolute;
+  top: 45%;
+  left: 3%;
+}
+.section2__flex1 h2 {
+  width: 30%;
+}
+.section2__flex2 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: absolute;
+  top: 55%;
+  left: 5%;
+}
+.section2__flex2 p {
+  width: 45%;
+  font-weight: bold;
+  font-size: clamp(0.6rem, 1vw, 0.75rem);
+}
+.section2__flex2 ul {
+  font-size: clamp(0.5rem, 0.6vw, 0.6rem);
+}
+
+table {
+  width: 35%;
+  border-collapse: collapse;
+  color: #FFFFFF;
+  right: 30%;
+}
+table th {
+  text-align: left;
+  vertical-align: top;
+  border-bottom: 2px solid white;
+  font-size: clamp(0.5rem, 0.6vw, 0.6rem);
+}
+table td {
+  border-left: 2px solid white;
+  text-align: left;
+  font-size: clamp(0.5rem, 0.6vw, 0.6rem);
+}
+table td:first-child {
+  border-left: none;
+}
+table ul {
+  padding-left: 2vw;
+}
+
+.section3__heading {
+  position: absolute;
+  bottom: 30%;
+  left: 5%;
+  width: 15%;
+}
+.section3__text {
+  position: absolute;
+  width: clamp(80px, 2vw, 100px);
+  font-size: clamp(clamp(0.5rem, 0.6vw, 0.6rem), 0.5vw, clamp(0.6rem, 1vw, 0.75rem));
+}
+.section3__text span {
+  display: block;
+  font-size: clamp(0.5rem, 0.6vw, 0.6rem);
+  font-weight: bold;
+}
+.section3__qr {
+  position: absolute;
+  bottom: 3%;
+  right: 0;
+  max-width: 100%;
+  width: 20%;
+}
+
+#text1 {
+  bottom: 28%;
+  left: 30%;
+}
+
+#text2 {
+  bottom: 32%;
+  left: 55%;
+}
+
+#text3 {
+  bottom: 26%;
+  right: 3%;
+}
+
+#text4 {
+  bottom: 18%;
+  left: 5%;
+}
+
+#text5 {
+  bottom: 15%;
+  right: 5%;
+}
+
+#text6 {
+  bottom: 6%;
+  left: 25%;
+}
+
+#text7 {
+  bottom: 6%;
+  right: 20%;
+}
+
+/*
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    color: $text-color-light;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    &__background {
+        max-width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+    }
+
+    &__logo {
+        flex: 1;
+        max-width: 150px;
+        height: auto;
+    }
+
+    &__link, &__contact {
+        flex: 1;
+    }
+    &__link, &__contact,&__logo {
+        padding: 0 1rem;
+    }
+
+    a {
+        color: $text-color-light;
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+*/
+.svgs {
+  position: absolute;
+}
+
+.yellow-man {
+  width: 23%;
+  top: 19%;
+  right: 16%;
+  animation: jump 0.5s ease-in-out infinite;
+}
+
+.green-thing {
+  width: 35%;
+  top: 10%;
+  left: 35%;
+  z-index: 10;
+}
+
+.green-arrow {
+  width: 25%;
+  top: 15%;
+  left: 17%;
+}
+
+.yellow-arrows {
+  width: 54%;
+  top: 29%;
+  left: 37%;
+  animation: arrow 5s ease-in-out infinite;
+}
+
+.green-things {
+  width: 40%;
+  top: 40%;
+  left: 25%;
+  animation: shake 1s ease-in-out infinite;
+}
+
+.flame {
+  width: 18%;
+  top: 50%;
+  left: 67%;
+  animation: grow 2s ease-in-out infinite;
+}
+
+.sun {
+  width: 30%;
+  bottom: 12%;
+  left: 17%;
+  animation: sun 2s ease-in-out infinite;
+}
+
+.earth {
+  width: 50%;
+  bottom: 10%;
+  left: 35%;
+}
+
+.earth-eyes {
+  width: 24%;
+  bottom: 17%;
+  left: 41%;
+}
+
+.money {
+  width: 25%;
+  bottom: 2%;
+  left: 40%;
+  animation: fly 5s ease-in-out infinite;
+}
+
+.cloud {
+  width: 30%;
+  bottom: 2%;
+  left: 0;
+  animation: cloud 10s linear infinite;
+}
+
+.phone {
+  width: 15%;
+  top: 21%;
+  left: 24%;
+}
+
+.pc {
+  width: 15%;
+  top: 32%;
+  left: 60%;
+}
+
+.small-cloud {
+  width: 16%;
+  top: 27%;
+  left: 38%;
+}
+
+@keyframes jump {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-2px);
+  }
+  50% {
+    transform: translateX(2px);
+  }
+  75% {
+    transform: translateX(-2px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes grow {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+}
+/* // initial rotate animation for the earth
+@keyframes rotate {
+    0% {
+      transform: rotate(0deg); 
+    }
+    100% {
+      transform: rotate(360deg); 
+    }
+}*/
+@keyframes arrow {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(8deg);
+  }
+  100% {
+    transform: rotate(-8deg);
+  }
+}
+/* // initial animation for the eyes on the earth
+@keyframes blink {
+    0%, 100% {
+        transform: scaleY(1); 
+    }
+    50% {
+        transform: scaleY(0.2); 
+    }
+}
+*/
+@keyframes sun {
+  0%, 100% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+@keyframes cloud {
+  0% {
+    transform: translateX(-15%);
+  }
+  100% {
+    transform: translateX(10%);
+  }
+}
+@keyframes fly {
+  0% {
+    transform: rotate(0deg) translateX(0px) translateY(0px);
+  }
+  50% {
+    transform: rotate(30deg) translateX(15px) translateY(-15px);
+  }
+  100% {
+    transform: rotate(0deg) translateX(0px) translateY(0px);
+  }
+}/*# sourceMappingURL=style.css.map */

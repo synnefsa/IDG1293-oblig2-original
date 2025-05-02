@@ -1,0 +1,469 @@
+// COLORS
+$blue-color: #095CA9;
+$green-color: #0EA25D;
+$text-color-base: #000000;
+$text-color-light: #FFFFFF;
+
+// TEXT 
+$base-size: 1.5vw; 
+$font-xsmall: clamp(0.5rem, 0.6vw, 0.6rem);
+$font-small: clamp(0.6rem, 1vw, 0.75rem);
+$font-body: clamp(0.75rem, 1.2vw, 1rem);
+$font-h1: clamp(1rem, 2vw, 1.5rem);
+
+// SPACING
+$space-xs: 1vw;
+$space-s: 1.5vw;
+$space-m: 2vw;
+$space-l: 2.5vw;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#poster-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    z-index: 0;
+    line-height: 1;
+
+    .poster-background, 
+    .poster-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 0;
+        z-index: -1; // behind the elements and text
+    }
+}
+
+h1, 
+h2 {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.marydale {
+    font-family: "marydale", sans-serif;
+}
+
+h1 {
+    font-size: $font-h1;
+    color: $blue-color;
+    font-weight: 800;
+
+    span {
+        color: $green-color;
+    }
+}
+ 
+h2 {
+    font-size: $font-small;
+    color: $text-color-base;
+    font-weight: 400;
+
+    & span {
+        font-size: $font-body;
+        font-weight: 800;
+    }
+}
+
+// SECTION 1
+.section1 {
+    width: 100%;
+
+    &__flex {
+        display: flex;
+        flex-direction: row;
+        justify-content:space-between;
+        align-items: flex-start;
+        width: 100%;
+        position: relative;
+
+        h1, h2 {
+            width: 35%;
+        }
+    }
+
+    &__p1 {
+        font-size: $font-small;
+    }
+    
+    &__p2 {
+        font-size: $font-xsmall;
+        position: absolute;
+        top: 22%;
+        width: 18%;
+    }
+    
+    &__p3-1,
+    &__p3-2 {
+        position: absolute;
+        font-size: $font-small;
+        color: $text-color-light;
+        font-weight: 800;
+    }
+    &__p3-1 {
+        top: 39%;
+        left: 30%;
+    }
+    &__p3-2 {
+        top: 41%;
+        left: 40%;
+    }
+}
+
+// SECTION 2
+.section2 {
+    width: 100%;
+    &__flex1 {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+        width: 100%;
+        position: absolute;
+        top: 45%;
+        left: 3%;
+
+        h2 {
+            width: 30%;
+        }
+    }
+
+    &__flex2 {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        position: absolute;
+        top: 55%;
+        left: 5%;
+    
+        p {
+            width: 45%;
+            font-weight: bold;
+            font-size: $font-small;
+        }
+        ul {
+            font-size: $font-xsmall;
+        }
+    }
+}
+
+table {
+    width: 35%;
+    border-collapse: collapse;
+    color: $text-color-light;
+    right: 30%;
+    
+    th {
+      text-align: left;
+      vertical-align: top;
+      border-bottom: 2px solid white; 
+      font-size: $font-xsmall;
+    }
+    
+    td {
+        border-left: 2px solid white;
+        text-align: left;
+        font-size: $font-xsmall;
+
+        &:first-child {
+            border-left: none; //no left border
+        }
+    }
+    
+    ul {
+        padding-left: $space-m;
+    }
+}
+
+
+// THIRD SECTION
+.section3 {
+    // position the heading
+    &__heading {
+        position: absolute;
+        bottom: 30%;
+        left: 5%;
+        width: 15%;
+    }
+
+    &__text {
+        position: absolute;
+        width: clamp(80px, 2vw, 100px);
+        font-size: clamp($font-xsmall, 0.5vw, $font-small);
+        //font-size: $font-xsmall;
+
+        span {
+            display: block;
+            //font-size: clamp($font-xsmall, 4vw, $font-small);
+            font-size: $font-xsmall;
+            font-weight: bold;
+        }
+    }
+
+    &__qr {
+        position: absolute;
+        bottom: 3%;
+        right: 0;
+        max-width: 100%;
+        width: 20%;
+    }  
+}
+
+// position the text around the earth
+#text1 { bottom: 28%; left: 30%; }
+#text2 { bottom: 32%; left: 55%; }
+#text3 { bottom: 26%; right: 3%; }
+#text4 { bottom: 18%; left: 5%; }
+#text5 { bottom: 15%; right: 5%; }
+#text6 { bottom: 6%; left: 25%; }
+#text7 { bottom: 6%; right: 20%; }
+
+
+// FOOTER
+/*
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    color: $text-color-light;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    &__background {
+        max-width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+    }
+
+    &__logo {
+        flex: 1;
+        max-width: 150px;
+        height: auto;
+    }
+
+    &__link, &__contact {
+        flex: 1;
+    }
+    &__link, &__contact,&__logo {
+        padding: 0 1rem;
+    }
+
+    a {
+        color: $text-color-light;
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+*/
+
+// SVG elements and their positions
+.svgs {
+    position: absolute; //common for all
+}
+
+.yellow-man {
+    width: 23%;
+    top: 19%;
+    right: 16%;
+    animation: jump 0.5s ease-in-out infinite;
+}
+
+.green-thing {
+    width: 35%;
+    top: 10%;
+    left: 35%;
+    z-index: 10;
+    //animation: jump 2s ease-in-out infinite;
+}
+.green-arrow {
+    width: 25%;
+    top: 15%;
+    left: 17%;
+}
+.yellow-arrows {
+    width: 54%;
+    top: 29%;
+    left: 37%;
+    animation: arrow 5s ease-in-out infinite;
+}
+.green-things {
+    width: 40%;
+    top: 40%;
+    left: 25%;
+    animation: shake 1s ease-in-out infinite;
+}
+.flame {
+    width: 18%;
+    top: 50%;
+    left: 67%;
+    animation: grow 2s ease-in-out infinite;
+}
+.sun {
+    width: 30%;
+    bottom: 12%;
+    left: 17%;
+    animation: sun 2s ease-in-out infinite;
+}
+.earth {
+    width: 50%;
+    bottom: 10%;
+    left: 35%;
+}
+.earth-eyes {
+    width: 24%;
+    bottom: 17%;
+    left: 41%;
+    //animation: blink 4s ease-in-out infinite;
+}
+.money {
+    width: 25%;
+    bottom: 2%;
+    left: 40%;
+    animation: fly 5s ease-in-out infinite; 
+}
+.cloud {
+    width: 30%;
+    bottom: 2%;
+    left: 0;
+    animation: cloud 10s linear infinite;
+}
+.phone {
+    width: 15%;
+    top: 21%;
+    left: 24%;
+}
+.pc {
+    width: 15%;
+    top: 32%;
+    left: 60%;
+}
+.small-cloud {
+    width: 16%;
+    top: 27%;
+    left: 38%;
+}
+
+// ANIMATIONS
+
+// jump
+@keyframes jump {
+    0%, 100% {
+      transform: translateY(0); 
+    }
+    50% {
+      transform: translateY(-5px);
+    }
+}
+
+// shake side to side
+@keyframes shake {
+    0% {
+      transform: translateX(0); 
+    }
+    25% {
+      transform: translateX(-2px); 
+    }
+    50% {
+      transform: translateX(2px); 
+    }
+    75% {
+      transform: translateX(-2px); 
+    }
+    100% {
+      transform: translateX(0); 
+    }
+}
+
+// grow and shrink 
+@keyframes grow {
+    0%, 100% {
+      transform: scale(1); 
+    }
+    50% {
+      transform: scale(1.2); 
+    }
+}
+
+/* // initial rotate animation for the earth
+@keyframes rotate {
+    0% {
+      transform: rotate(0deg); 
+    }
+    100% {
+      transform: rotate(360deg); 
+    }
+}*/
+
+// small rotation on arrows
+@keyframes arrow {
+    0% {
+        transform: rotate(0deg); 
+    }
+    50% {
+        transform: rotate(8deg);
+    }
+    100% {
+        transform: rotate(-8deg);
+    }
+}
+
+/* // initial animation for the eyes on the earth
+@keyframes blink {
+    0%, 100% {
+        transform: scaleY(1); 
+    }
+    50% {
+        transform: scaleY(0.2); 
+    }
+}
+*/
+
+// sun is changing intensity 
+@keyframes sun {
+    0%, 100% {
+      opacity: 0.5;
+    }
+    50% {
+      opacity: 1; 
+    }
+}
+
+// cloud is moving on the x-axis
+@keyframes cloud {
+    0% {
+      transform: translateX(-15%);
+    }
+    100% {
+      transform: translateX(10%);
+    }
+}
+
+// fly around - the money with wings
+@keyframes fly {
+    0% {
+      transform: rotate(0deg) translateX(0px) translateY(0px);
+    }
+    50% {
+      transform: rotate(30deg) translateX(15px) translateY(-15px);
+    }
+    100% {
+      transform: rotate(0deg) translateX(0px) translateY(0px);
+    }
+}
+  
+
